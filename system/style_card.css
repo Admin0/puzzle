@@ -115,8 +115,14 @@ body.page {
 
 .contents table th,
 .contents table td {
-  border: 1px solid;
+  border: 3px solid;
   padding: 0.25em 0.5em;
+}
+
+.contents table.box td {
+  padding: 0;
+  width: 1.5em;
+  height: 1.5em;
 }
 
 .contents table.no-border th,
@@ -131,6 +137,96 @@ body.page {
 .contents table tr th.center,
 .contents table tr td.center {
   text-align: center;
+}
+
+.contents table td.l {
+  border-left: 3px solid;
+}
+
+.contents table td.r {
+  border-right: 3px solid;
+}
+
+.contents table td.t {
+  border-top: 3px solid;
+}
+
+.contents table td.b {
+  border-bottom: 3px solid;
+}
+
+.contents table td.lr,
+.contents table td.rl, {
+  border-left: 3px solid;
+  border-right: 3px solid;
+}
+
+.contents table td.lt,
+.contents table td.tl, {
+  border-top: 3px solid;
+  border-left: 3px solid;
+}
+
+.contents table td.tr,
+.contents table td.rt, {
+  border-top: 3px solid;
+  border-bottom: 3px solid;
+}
+
+.contents table td.tb,
+.contents table td.bt, {
+  border-top: 3px solid;
+  border-bottom: 3px solid;
+}
+
+.contents table td.lb,
+.contents table td.bl, {
+  border-bottom: 3px solid;
+  border-left: 3px solid;
+}
+
+.contents table td.rb,
+.contents table td.br, {
+  border-bottom: 3px solid;
+  border-right: 3px solid;
+}
+
+.contents table td.ltr,
+.contents table td.lrt,
+.contents table td.rlt,
+.contents table td.rlt,
+.contents table td.tlr,
+.contents table td.trl {
+  border-left: 3px solid;
+  border-top: 3px solid;
+  border-right: 3px solid;
+}
+
+/* .contents table td.l,
+.contents table td.l,
+.contents table td.l {
+  border-left: 3px solid;
+  border-left: 3px solid;
+  border-left: 3px solid;
+}
+
+.contents table td.l,
+.contents table td.l,
+.contents table td.l {
+  border-left: 3px solid;
+  border-left: 3px solid;
+  border-left: 3px solid;
+}
+
+.contents table td.l,
+.contents table td.l,
+.contents table td.l {
+  border-left: 3px solid;
+  border-left: 3px solid;
+  border-left: 3px solid;
+} */
+.contents table td.all {
+  border: 3px solid;
 }
 
 .contents table .no,
@@ -152,14 +248,19 @@ body.page {
   width: calc(100% - 1em - 2px);
 }
 
-#card_title {
-  text-align: center;
-  font-size: 1.25em;
+.cw, .r90 {
+  transform: rotate(90deg);
+  display: inline-block;
 }
 
-#card_footer {
-  text-align: center;
-  font-size: 12px;
+.cww, .r180 {
+  transform: rotate(180deg);
+  display: inline-block;
+}
+
+.ccw, .r270 {
+  transform: rotate(270deg);
+  display: inline-block;
 }
 
 /****************************************/
@@ -235,6 +336,7 @@ body.page {
   color: #673ab7;
   font-weight: bold;
   border: 3px solid #673ab7;
+  max-width: calc(100% - 2em - 65px);
 }
 
 .key {
@@ -257,7 +359,7 @@ body.page {
 
 .key:active,
 .key.on {
-  box-shadow: 0 0px #e0e0e0;
+  box-shadow: 0 0px #673ab7;
   margin: -.2em .25em -.25em;
 }
 
@@ -277,15 +379,15 @@ body.page {
     margin-top: 2em;
     margin-bottom: 2em;
   }
-    #main_item .contents {
-      height: inherit;
-      padding: 1em;
-    }
+
+  #main_item .contents {
+    height: inherit;
+    padding: 1em;
+  }
 }
 
 /* ***** mobile ***** */
 @media handheld, only screen and (max-device-width:480px), only screen and (max-device-width:320px), screen and (max-width:800px) {
-
   .contents section {
     font-size: 1.5em;
   }

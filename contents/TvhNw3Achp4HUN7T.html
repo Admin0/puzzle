@@ -1,0 +1,26 @@
+<section class="question">
+  <div class="title">
+    <strong>3개의 불투명한 상자</strong>가 있다. 각 상자에는 박하, 아니스, 혼합이라는 라벨이 붙어있다. 하지만 과자 가게 주인은 모든 라벨이 <strong>잘못 붙어있다</strong>고 말했다. 상자 속 내용물을 확인하기 위해서는 <strong>사탕을 최소 몇 번 꺼내야 하는가?</strong>
+  </div>
+  <div class="authorship">영화 페르마의 밀실</div>
+</section>
+<section class="answer input">
+  <input type="text" name="" value="" placeholder="정답 입력" size="12" id="input_answer">
+  <button class="key" onclick="answer_check();">확인</button>
+</section>
+<section class="answer output hide">
+  <strong>1 번</strong>
+  <div class="subtitle">
+    <ol>
+      <li>혼합 상자를 열었을 때 박하가 들어있다고 가정</li>
+      <li>박하 상자에는 박하가 들어있지 않다</li>
+      <li>박하 상자에 들어갈 수 있는 건 아니스 혹은 혼합</li>
+      <li>아니스 상자에 아니스가 들어갈 수 없으니 아니스 상자에는 혼합이 들어있음을 유추 가능</li>
+      <li>남은 건 아니스뿐이니 박하 상자에 아니스가 들어있음을 유추 가능</li>
+    </ol>
+    즉, 혼합이라고 적힌 상자에서 1번만 꺼내면 모든 내용물을 알 수 있다.
+  </div>
+</section>
+<script type="text/javascript">
+  var list_answer = ["1"];
+</script>

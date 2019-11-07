@@ -18,7 +18,7 @@
 
 .contents ::selection {
   /* text-shadow: 1px 2px 1px #c8b900; */
-  background: #fff;
+  background: rgba(0, 0, 0, 0);
   padding: 1em;
 }
 
