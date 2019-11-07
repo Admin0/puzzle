@@ -1,0 +1,292 @@
+@charset "utf-8";
+
+body.page {
+  position: relative;
+  width: 210mm;
+  height: auto;
+  margin: 15mm auto;
+  padding: 10mm;
+  box-shadow: 0 2px 5px 2px rgba(0, 0, 0, .2);
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.26);
+  background: #fff;
+}
+
+.contents section {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 2.5em;
+  line-height: 1.5;
+}
+
+.contents section.question, .contents section.answer {
+  font-family: 'Noto Sans KR', sans-serif;
+  /* background: gold; */
+  font-weight: bold;
+  position: absolute;
+  top: 56px;
+  width: calc(50% - 2em);
+  padding: .5em 1em;
+  overflow-y: scroll;
+}
+
+.contents .question {}
+
+.contents section.answer {
+  right: 0;
+}
+
+.contents section.question:before,
+.contents section.answer:before {
+  content: "Question.";
+  font-family: 'Pacifico', cursive;
+  width: 100%;
+  display: block;
+  margin-bottom: .5em;
+}
+
+.contents section.answer:before {
+  content: "Answer.";
+}
+
+.contents strong {
+  color: #673ab7;
+  font-size: 1.25em;
+  font-weight: 700;
+}
+
+.contents .subtitle {
+  color: #aaa;
+  font-size: .75em;
+  display: inline-block;
+}
+
+.contents .authorship {
+  float: right;
+  background: #673ab7;
+  color: #fff;
+  font-size: .5em;
+  display: inline-block;
+  padding: 0 .25em;
+}
+
+.contents .authorship::before {
+  content: "출처: "
+}
+
+/* ad: 광고가 끼면 first-child 선택자가 안 먹기 때문에 first-of-type 으로 우회합니당^^ */
+.contents .ad {
+  margin: 1em 0;
+}
+
+.q_wrap:first-of-type {
+  margin-top: 0;
+}
+
+.q_wrap:last-of-type {
+  margin-bottom: 0;
+}
+
+.contents:not(.on) .q_wrap {
+  padding: 0 0 0 1.25em;
+}
+
+.contents:not(.on) .q_wrap:not(.sub)::before {
+  content: counter(question) ".";
+  position: absolute;
+  top: 0;
+  right: calc(100% - 1em);
+  font: bold 1em Serif;
+  line-height: 1.75;
+}
+
+.contents table {
+  margin-top: .25em;
+  border-collapse: collapse;
+  font-size: 1em;
+  text-indent: 0;
+}
+
+.contents table .small {
+  font-size: .75em;
+}
+
+.contents table span {
+  white-space: nowrap;
+}
+
+.contents table th,
+.contents table td {
+  border: 1px solid;
+  padding: 0.25em 0.5em;
+}
+
+.contents table.no-border th,
+.contents table.no-border td {
+  border: 0;
+}
+
+.contents table.center th,
+.contents table.center td,
+.contents table tr.center th,
+.contents table tr.center td,
+.contents table tr th.center,
+.contents table tr td.center {
+  text-align: center;
+}
+
+.contents table .no,
+.contents table.right td,
+.contents table tr.right td {
+  text-align: right;
+}
+
+.contents table caption {
+  text-align: left;
+}
+
+/* .q_list */
+.contents .q_list {
+  text-align: center;
+  border: 3px solid;
+  padding: .5em;
+  margin: .5em 0;
+  width: calc(100% - 1em - 2px);
+}
+
+#card_title {
+  text-align: center;
+  font-size: 1.25em;
+}
+
+#card_footer {
+  text-align: center;
+  font-size: 12px;
+}
+
+/****************************************/
+/*                 img                  */
+/****************************************/
+.contents .img, .contents img, .contents .svg, .contents svg, .contents object {
+  width: auto;
+  max-width: 100%;
+  height: inherit;
+  max-height: inherit;
+  margin-left: 0;
+  transition: .25s fill;
+}
+
+.contents .question .load {
+  margin: auto;
+}
+
+.contents svg {
+  stroke: rgb(0, 0, 0);
+}
+
+.contents .w100px {
+  max-width: 100px;
+}
+
+.contents .w150px {
+  max-width: 150px;
+}
+
+.contents .w200px {
+  max-width: 200px;
+}
+
+.contents .w300px {
+  max-width: 300px;
+}
+
+.contents .w400px {
+  max-width: 400px;
+}
+
+.contents .w500px {
+  max-width: 500px;
+}
+
+.contents .h50px {
+  max-height: 50px;
+}
+
+.contents .h75px {
+  max-height: 75px;
+}
+
+.contents .h100px {
+  max-height: 100px;
+}
+
+.translation {
+  /* color: rgba(0, 0, 0, .38); */
+  opacity: .65;
+  font-size: .75em;
+  font-style: italic;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+/****************************************/
+/*                 key                  */
+/****************************************/
+.contents input {
+  font-size: 1em;
+  padding: 0 .5em;
+  color: #673ab7;
+  font-weight: bold;
+  border: 3px solid #673ab7;
+}
+
+.key {
+  transition: .25s;
+  text-shadow: 0 -1px #673ab7;
+  box-shadow: 0 .5em #673ab7;
+  border: 3px solid #673ab7;
+  border-radius: 3px;
+  margin: -.7em .25em .25em;
+  padding: .25em .75em;
+  background: white;
+  color: #212121;
+  font-size: .75em;
+  font-weight: bold;
+  vertical-align: top;
+  display: inline-block;
+  cursor: pointer;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.key:active,
+.key.on {
+  box-shadow: 0 0px #e0e0e0;
+  margin: -.2em .25em -.25em;
+}
+
+/* ***** mobile ***** */
+@media handheld, only screen and (max-width:1280px) {
+  .contents section.question, .contents section.answer {
+    font-family: 'Noto Sans KR', sans-serif;
+    /* background: gold; */
+    font-weight: bold;
+    position: static;
+    width: 100%;
+    padding: 0;
+    overflow: visible;
+  }
+
+  .contents section.answer {
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+    #main_item .contents {
+      height: inherit;
+      padding: 1em;
+    }
+}
+
+/* ***** mobile ***** */
+@media handheld, only screen and (max-device-width:480px), only screen and (max-device-width:320px), screen and (max-width:800px) {
+
+  .contents section {
+    font-size: 1.5em;
+  }
+}

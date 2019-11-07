@@ -1,0 +1,262 @@
+@page {
+  margin: 10mm;
+  width: 210mm;
+  height: 297mm;
+}
+
+header #print_icon,
+nav,
+section.ad,
+section#item_list,
+footer .copyright {
+  display: none;
+}
+
+body {
+  width: 210mm;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  color: #888;
+  font-size: 8pt;
+  box-shadow: none !important;
+}
+
+footer:after {
+  color: #888;
+  content: "https://jinh.kr/qualify/";
+}
+
+header {
+  position: static;
+  padding: 0;
+  width: inherit;
+  box-shadow: none !important;
+}
+
+header>h1 {
+  text-align: center;
+  margin: 0 0 10mm;
+}
+
+#main_item {
+  width: inherit;
+  background: initial;
+}
+
+#main_item .contents {
+  height: inherit;
+  padding: 0;
+}
+
+.contents {
+  line-height: 1.75;
+  column-gap: 2.5em;
+  counter-reset: question;
+}
+
+.contents::after {
+  font-weight: bold;
+  margin-top: 1em;
+  content: "끝.";
+}
+
+.contents {
+  column-count: 2;
+  /* max-width: 210mm; */
+  column-gap: 10mm;
+  /* margin: 16pt auto; */
+  font-size: 8pt;
+  column-fill: auto;
+}
+
+.question, .answer, .comment {
+  transform: translateX(0);
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid-column;
+  /* display: list-item;
+  list-style: none; */
+}
+
+.q_wrap {
+  position: relative;
+  padding: 0 2em 0 3em;
+  margin-top: 2.5em;
+  counter-reset: question_sub;
+}
+
+.q_wrap:first-child {
+  margin-top: 0;
+}
+
+.q_wrap:not(.sub)::before {
+  content: counter(question);
+  counter-increment: question;
+  position: absolute;
+  right: calc(100% - 1em);
+  font: bold 2em "Noto Serif KR", Serif;
+  line-height: 1;
+}
+
+.contents .q_wrap {
+  padding: 0 0 0 1.25em;
+}
+
+.contents .q_wrap:not(.sub)::before {
+  content: counter(question) ".";
+  position: absolute;
+  top: 0;
+  right: calc(100% - 1em);
+  font: bold 1em Serif;
+  line-height: 1.75;
+}
+
+.contents .q_wrap:nth-of-type(n+10):not(.sub)::before {
+  right: calc(100% - 1.5em);
+}
+
+.contents .q_wrap:nth-of-type(n+100):not(.sub)::before {
+  right: calc(100% - 2em);
+}
+
+.q_wrap .question {
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+.q_wrap:nth-of-type(n+10) .question {
+  margin-left: .5em;
+}
+
+.q_wrap:nth-of-type(n+100) .question {
+  margin-left: 1em;
+}
+
+.q_wrap.sub {
+  padding: 0 0 0 1.75em;
+  margin: 0;
+}
+
+.q_wrap .question.sub {
+  position: relative;
+  margin-top: 1.5em;
+}
+
+.q_wrap .question.sub::before {
+  content: "("counter(question_sub) ") ";
+  counter-increment: question_sub;
+  position: absolute;
+  right: calc(100% + .5em);
+}
+
+.q_wrap .answer {
+  outline: .75em solid #fff0;
+  margin-bottom: 1em;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: normal;
+}
+
+body:not(.answer__quiz) .contents.multiple_choice .q_wrap .answer li[checked] {
+  color: #2196f3 !important;
+}
+
+body:not(.answer__quiz) .contents.multiple_choice .q_wrap .answer li[checked]::before {
+  border-color: #2196f3 !important;
+  background: #2196f3 !important;
+  color: #FFFACDC0 !important;
+}
+
+.q_wrap .comment {
+  font-size: .75em;
+  /* font-style: italic; */
+  color: #2196f3;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* style__answer__quiz.css */
+.answer__quiz .q_wrap:hover .answer,
+.answer__quiz .q_wrap:hover .comment {
+  opacity: 0;
+}
+
+/* ad: 광고가 끼면 first-child 선택자가 안 먹기 때문에 first-of-type 으로 우회합니당^^ */
+.contents .ad {
+  margin: 1em 0;
+}
+
+.contents .ad:first-child {
+  margin: 0 0 1em;
+}
+
+.q_wrap:first-of-type {
+  margin-top: 0;
+}
+
+.q_wrap:last-of-type {
+  margin-bottom: 0;
+}
+
+.contents table {
+  border-collapse: collapse;
+  font-size: inherit;
+}
+
+.contents table th,
+.contents table td {
+  border: 1px solid;
+  padding: 0.25em 0.75em;
+}
+
+#card_title {
+  text-align: center;
+  font-size: 1.25em;
+}
+
+#card_footer {
+  text-align: center;
+  font-size: 12px;
+}
+
+.img, img, .svg, svg, object, .load {
+  max-width: 100%;
+  height: inherit;
+  margin-left: 0;
+  transition: .25s fill;
+}
+
+.btn_card_print {
+  transition: .25s;
+  text-shadow: 0 -1px #e0e0e0;
+  box-shadow: 0 6px #e0e0e0;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  margin: -.5em .25em .25em;
+  padding: .25em .75em;
+  background: white;
+  color: #212121;
+  font-size: .75em;
+  vertical-align: top;
+  display: inline-block;
+  cursor: pointer;
+  position: absolute;
+  right: 1.5em;
+  top: 2em;
+}
+
+.btn_card_print:active {
+  box-shadow: 0 0px #e0e0e0;
+  margin: 0 .25em -.25em;
+}
+
+.btn_card_print i {
+  vertical-align: text-top;
+}

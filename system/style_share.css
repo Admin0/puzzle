@@ -1,0 +1,76 @@
+#share {
+  display: none;
+  align-items: center;
+  z-index: 5;
+  position: fixed;
+  width: 600px;
+  height: 150px;
+  top: calc(50% - 75px);
+  left: calc(50% - 300px);
+  background: #fff;
+  margin: auto;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .25);
+  */
+}
+
+#share.on {
+  display: flex;
+  align-items: center;
+}
+
+#share .share {
+  flex: auto;
+  text-align: center;
+  overflow: hidden;
+  width: 25%;
+  margin: 1em auto 0;
+}
+
+#share .share .icon {
+  max-width: 5em;
+  width: 48px;
+  margin: auto;
+}
+
+#share .share .icon svg {
+  width: 100%;
+  fill: gray;
+}
+
+#share .share .title {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-top: .5em;
+}
+
+@media handheld, only screen and (max-device-width:480px), only screen and (max-device-width:320px), screen and (max-width:1080px) {
+  #share {
+    display: flex;
+    width: calc(100% - 2em);
+    height: 100px;
+    transition: .25s bottom;
+    left: 0;
+    bottom: -160px;
+    margin: 0;
+    top: initial;
+    padding: 1em;
+    box-shadow: 0 -2px 6px 0 rgba(60, 64, 67, .15);
+  }
+
+  #share.on {
+    bottom: 0;
+  }
+
+  #share .share {
+    margin: 0;
+  }
+
+  #share .share .icon {
+    width: 32px;
+  }
+
+  #share .share .title {
+    font-size: 12px;
+  }
+}

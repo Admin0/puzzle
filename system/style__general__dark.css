@@ -1,0 +1,159 @@
+/* general */
+.general__dark,
+.general__dark header,
+.general__dark nav,
+.general__dark div#splash,
+.general__dark .copyright,
+.general__dark #main_item,
+.general__dark nav #nav_header,
+.general__dark #to_github,
+.general__dark dl#setting, .general__dark #share, .general__dark nav #nav_footer {
+  background: rgba(50, 54, 57, 1);
+  color: rgb(189, 193, 198);
+  transition: .3s, background-color 0s, color 0s;
+}
+
+.general__dark nav #nav_footer {
+  transition: 0s;
+}
+
+/* only color */
+.general__dark #setting .setting_title, .general__dark #setting .setting_item, .general__dark #setting dt, .general__dark #setting input[checked]+dt, .general__dark #setting dd,
+.general__dark h2, .general__dark h2 a, .general__dark h3, .general__dark h3 a, .general__dark .contents h2, .general__dark .contents h2 a, .general__dark .contents h3, .general__dark .contents h3 a,
+.contents h2, .general__dark .contents h2 a, .general__dark .contents h3, .general__dark .contents h3 a,
+.general__dark nav a,
+.general__dark section>h3+a, .general__dark nav h3>a:nth-child(2) {
+  color: rgb(189, 193, 198);
+}
+
+.general__dark.answer__quiz .q_wrap .answer,
+.general__dark .contents.multiple_choice .q_wrap .answer li[checked],
+.general__dark.answer__quiz .contents.multiple_choice .q_wrap:hover .answer li[checked] {
+  background: #424242C0;
+  outline-color: #424242C0;
+}
+
+.general__dark:not(.answer__quiz) .contents.multiple_choice .q_wrap .answer li[checked],
+.general__dark.answer__quiz .contents.multiple_choice .q_wrap:hover .answer li[checked] {
+  color: #c8b900;
+}
+
+/* imgs */
+.general__dark .contents .img,
+.general__dark .contents img,
+.general__dark .contents svg,
+.general__dark .contents object {
+  fill: rgb(189, 193, 198);
+  stroke: rgb(189, 193, 198);
+  color: rgb(189, 193, 198);
+}
+
+.general__dark .material-icons svg {
+  fill: rgb(189, 193, 198);
+  color: rgb(189, 193, 198);
+}
+
+/* contents */
+.general__dark .q_wrap .comment {
+  color: #c8b900;
+}
+
+.general__dark .q_wrap .comment svg {
+  color: #c8b900;
+  stroke: #c8b900;
+}
+
+/* nav */
+.general__dark nav {
+  border-right: solid 1px var(--black-transparent-12, rgba(30, 34, 37, .45));
+}
+
+.general__dark nav #nav_header {
+  box-shadow: 0 -1px 0 rgba(30, 34, 37, .45) inset !important;
+}
+
+.general__dark #setting_bt {
+  border-left: 1px solid rgba(30, 34, 37, .45);
+}
+
+/* misc */
+.general__dark .shadow-right {
+  box-shadow: 2px 0 6px 0 rgba(30, 34, 37, .45);
+}
+
+.general__dark .shadow-bottom {
+  box-shadow: 0 2px 6px 0 rgba(30, 34, 37, .45);
+}
+
+.general__dark .shadow-bottom-inset {
+  box-shadow: inset 0 -7px 6px -5px rgba(30, 34, 37, .45);
+}
+
+.general__dark .shadow-top-inset {
+  box-shadow: inset 0 7px 6px -5px rgba(30, 34, 37, .45);
+}
+
+.general__dark .shadow-top-inset.shadow-bottom-inset {
+  box-shadow: inset 0 7px 6px -5px rgba(30, 34, 37, .45), inset 0 -7px 6px -5px rgba(30, 34, 37, .45);
+}
+
+/* anchor */
+.general__dark a {
+  color: #f0f0f0;
+}
+
+.general__dark h3 a {
+  color: rgb(189, 193, 198);
+}
+
+.general__dark .contents a:hover {
+  background: rgba(158, 158, 158, .2);
+}
+
+/* context */
+.general__dark #context_menu,
+.general__dark .context_menu {
+  background: #424242;
+  color: rgb(189, 193, 198);
+  ;
+}
+
+/* .key */
+.general__dark .key {
+  background: #424242;
+  text-shadow: 0 -1px #212121;
+  box-shadow: 0 6px #212121;
+  border: 1px solid #212121;
+  color: #e0e0e0;
+}
+
+.general__dark .key:active,
+.general__dark .key.on {
+  box-shadow: 0 0px #212121;
+}
+
+/* .disabled */
+.general__dark .disabled,
+.general__dark .disabled a {
+  color: rgba(255, 255, 255, 0.3) !important;
+}
+
+/* .targeted */
+.general__dark .targeted {
+  background: rgba(158, 158, 158, .2) !important;
+}
+
+.general__dark nav .item:after {
+  background: #c8b900;
+}
+
+.general__dark .targeted i svg, .general__dark .targeted i, .general__dark .targeted a, .general__dark .targeted a span {
+  fill: #c8b900;
+  color: #c8b900;
+}
+
+@media handheld, only screen and (max-device-width: 480px), only screen and (max-device-width: 320px), screen and (max-width: 1080px) {
+  .general__dark #item_list section.item {
+    background: rgba(50, 54, 57, 1);
+  }
+}
