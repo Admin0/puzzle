@@ -13,14 +13,20 @@ const ad =
   '</section>'
 
 function after_load(id) {
-  $('#title').html(id);
+  $('#title').html(content_data.title + " <span id='title_id' class='subtitle'>(#" + id + ")</span>");
 
   // scroll to top for mobile
   $('html, body').animate({
     scrollTop: 0
   }, pageYOffset / 2);
 
-  // $('.title').textillate();
+  // 출처 생성
+  $('section.question').append('<div class="authorship">' + content_data.authorship + '</div>');
+
+  // 정답 조합
+  typeof list_answer != "undefined" ? list_answer.concat(content_data.answer) : list_answer = content_data.answer;
+  list_answer.push(id);
+  // console.log(list_answer);
 
 }
 

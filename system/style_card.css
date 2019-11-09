@@ -53,7 +53,7 @@ body.page {
   font-weight: 700;
 }
 
-.contents .subtitle {
+.subtitle {
   color: #aaa;
   font-size: .75em;
   display: inline-block;
@@ -77,25 +77,11 @@ body.page {
   margin: 1em 0;
 }
 
-.q_wrap:first-of-type {
-  margin-top: 0;
+.contents .segment7 {
+  font-family: 'Segment7Standard';
 }
-
-.q_wrap:last-of-type {
-  margin-bottom: 0;
-}
-
-.contents:not(.on) .q_wrap {
-  padding: 0 0 0 1.25em;
-}
-
-.contents:not(.on) .q_wrap:not(.sub)::before {
-  content: counter(question) ".";
-  position: absolute;
-  top: 0;
-  right: calc(100% - 1em);
-  font: bold 1em Serif;
-  line-height: 1.75;
+.contents .segment14 {
+  font-family: 'ledfontsharpRegular';
 }
 
 .contents table {

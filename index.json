@@ -1,5 +1,47 @@
-
-  [
-    "TaMCYKcucQ9zq3p9",
-    "BDp4Qp7ry2Hq4TR5"
-  ]
+{
+  "7TgkjCMXLwq4UPwz": {
+    "title": "첫인상은 말 대신 퍼즐로",
+    "authorship": "tvN 문제적남자 170129",
+    "answer": ["LOVEIT"]
+  },
+  "BDp4Qp7ry2Hq4TR5": {
+    "title": "짤짤궁 돌담길에서",
+    "authorship": "tvN 문제적남자 170521",
+    "answer": ["8"]
+  },
+  "CWKUWMk3mW83uXrH": {
+    "title": "6일의 사막 횡단",
+    "authorship": "tvN 문제적남자 150709, 시청자문제 redored",
+    "answer": ["2"]
+  },
+  "dvTfCbD8tyMKFB89": {
+    "title": "숫자 넣기 851",
+    "authorship": "tvN 문제적남자 170521",
+    "answer": ["9661+158=2156", "1601+1051=2651"]
+  },
+  "Q8PaZFjY25dAZxNz": {
+    "title": "개미 수열",
+    "authorship": "베르나르 베르베르(Bernard Werber)의 소설 개미",
+    "answer": ["1123123111"]
+  },
+  "TaMCYKcucQ9zq3p9": {
+    "title": "숫자 넣기 juh******",
+    "authorship": "tvN 문제적남자 170326, 시청자문제 juh******",
+    "answer": ["3.111315", "9.777575", "17"]
+  },
+  "TvhNw3Achp4HUN7T": {
+    "title": "라벨이 잘못 붙은 사탕 상자",
+    "authorship": "영화 페르마의 밀실",
+    "answer": ["1"]
+  },
+  "zA7EC4MgfyuFZ3qC": {
+    "title": "정사각형 만들기",
+    "authorship": "tvN 문제적남자 160110",
+    "answer": []
+  },
+  "jsvnvc35g267r6hx": {
+    "title": "숫자 계산",
+    "authorship": "tvN 문제적남자 160228, 시청자문제 wonder******",
+    "answer": ["8939"]
+  }
+}

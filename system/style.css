@@ -2,6 +2,8 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR|Noto+Serif+KR');
 @import url('https://fonts.googleapis.com/css?family=Material+Icons');
 @import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+@import url('https://fontlibrary.org/face/segment7');
+@import url('https://fontlibrary.org/face/ledfont-sharp');
 /*@import url(iconfont/material-icons.css);*/
 /* @import url('style_card.css'); */
 @import url('style__general__dark.css') screen;
@@ -76,6 +78,10 @@ body.columns {
 
 body.fold {
   padding: 0 0 0 68px;
+}
+
+#title_id {
+  cursor: pointer;
 }
 
 #main_item {
